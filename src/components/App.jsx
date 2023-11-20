@@ -34,7 +34,10 @@ export class App extends Component {
     return (
       <Container>
         <Section title="Leave your feedback">
-          <FeedbackOptions onClickButton={this.onClickButton} />
+          <FeedbackOptions
+            options={this.state}
+            onClickButton={this.onClickButton}
+          />
         </Section>
         <Section title="Statistics">
           {this.countTotalFeedback() === 0 ? (
