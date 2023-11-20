@@ -1,33 +1,25 @@
+import { OptionsContainer, OptionBtn } from './FeedbackOptions.styled';
+
 export const FeedbackOptions = ({ onClickButton }) => {
   return (
-    <div>
-      <button
+    <OptionsContainer>
+      <OptionBtn
         type="button"
         name="Good"
-        onClick={evt => {
-          onClickButton(evt.target.name);
-        }}
+        onClick={() => onClickButton('Good')}
       >
         Good
-      </button>
-      <button
+      </OptionBtn>
+      <OptionBtn
         type="button"
         name="Neutral"
-        onClick={evt => {
-          onClickButton(evt.target.name);
-        }}
+        onClick={() => onClickButton('Neutral')}
       >
         Neutral
-      </button>
-      <button
-        type="button"
-        name="Bad"
-        onClick={evt => {
-          onClickButton(evt.target.name);
-        }}
-      >
+      </OptionBtn>
+      <OptionBtn type="button" name="Bad" onClick={() => onClickButton('Bad')}>
         Bad
-      </button>
-    </div>
+      </OptionBtn>
+    </OptionsContainer>
   );
 };

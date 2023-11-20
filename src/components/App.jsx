@@ -2,7 +2,8 @@ import { Component } from 'react';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
 import { Section } from './Section/Section';
-import { Notification } from './Statistics/Notification';
+import { Notification } from './Notification/Notification';
+import { Container } from './App.styled';
 
 export class App extends Component {
   state = {
@@ -31,7 +32,7 @@ export class App extends Component {
 
   render() {
     return (
-      <div>
+      <Container>
         <Section title="Leave your feedback">
           <FeedbackOptions onClickButton={this.onClickButton} />
         </Section>
@@ -46,7 +47,7 @@ export class App extends Component {
             />
           )}
         </Section>
-      </div>
+      </Container>
     );
   }
 }
